@@ -42,11 +42,28 @@ sudo systemctl enable jenkins
 
 sudo systemctl start jenkins
 
+cat /var/lib/jenkins/secrets/initialAdminPassword
+install plugins and configure global credentials and tools 
+m3
+aws cred
+docker cred
+docker plugin
+aws plugin
+sonar scanner
+
+
+
+
+
+
+
 Install docker 
 
 sudo apt install docker.io -y
 
 usermod -aG docker jenkins 
+
+sudo systemctl restart jenkins
 
 aws configure 
 
@@ -57,3 +74,10 @@ Install kubectl
 curl -LO "https://dl.k8s.io/release/v1.26.0/bin/linux/amd64/kubectl"
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
+
+Install python and pip
+
+sudo apt install python3.12-venv -y 
+
+Install Selenium
+sh " docker run -d -p 4444:4444 selenium/standalone-chrome"
