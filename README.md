@@ -50,12 +50,10 @@ docker cred
 docker plugin
 aws plugin
 sonar scanner
+ssh agent
+Install helm
 
-
-
-
-
-
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 chmod 700 get_helm.sh ./get_helm.sh
 
 Install docker 
 
@@ -82,6 +80,10 @@ sudo apt install python3.12-venv -y
 Install Selenium
 sh " docker run -d -p 4444:4444 selenium/standalone-chrome"
 
- curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
- chmod 700 get_helm.sh
- ./get_helm.sh
+Install ansible 
+
+sudo apt update
+sudo apt install -y software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install -y ansible
+
